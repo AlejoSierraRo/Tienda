@@ -3,6 +3,7 @@ package tiendavideo.apitiendavideo.modelo;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "region")
 public class Region {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
