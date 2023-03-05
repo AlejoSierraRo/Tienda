@@ -25,6 +25,15 @@ public class Alquiler {
     @Column(name = "precio")
     private int precio;
 
+    public Alquiler(Long id, Date fechaPrestamo, int plazo, int precio, Inventario inventario, Tercero tercero) {
+        this.id = id;
+        this.fechaPrestamo = fechaPrestamo;
+        this.plazo = plazo;
+        this.precio = precio;
+        this.inventario = inventario;
+        this.tercero = tercero;
+    }
+
     @ManyToOne 
     @JoinColumn(name = "idinventario", referencedColumnName = "id")
     private Inventario inventario;
