@@ -1,5 +1,4 @@
-package tiendavideo.apitiendavideo.modelo;
-
+package tienda.apitienda.modelo;
 import javax.persistence.*;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -7,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 @Table(name = "empresa")
 public class Empresa {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "secuencia_empresa")
     @GenericGenerator(name = "secuencia_empresa", strategy="increment")
@@ -52,5 +52,5 @@ public class Empresa {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
 }

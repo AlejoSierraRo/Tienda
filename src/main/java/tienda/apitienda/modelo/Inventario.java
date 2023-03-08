@@ -1,4 +1,4 @@
-package tiendavideo.apitiendavideo.modelo;
+package tienda.apitienda.modelo;
 
 import java.sql.Date;
 
@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "inventario")
 public class Inventario {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

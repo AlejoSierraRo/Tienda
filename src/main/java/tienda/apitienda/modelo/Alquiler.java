@@ -1,4 +1,4 @@
-package tiendavideo.apitiendavideo.modelo;
+package tienda.apitienda.modelo;
 
 import java.sql.Date;
 
@@ -16,16 +16,28 @@ public class Alquiler {
     @Column(name = "fechaprestamo")
     private Date fechaPrestamo;
 
-    @Column(name = "fechadevolucion")
-    private Date fechaDevolucion;
-
     @Column(name = "plazo")
     private int plazo;
 
     @Column(name = "precio")
-    private int precio;
+    private double precio;
 
-    public Alquiler(Long id, Date fechaPrestamo, int plazo, int precio, Inventario inventario, Tercero tercero) {
+    @Column(name = "fechadevolucion")
+    private Date fechaDevolucion;
+
+    @ManyToOne
+    @JoinColumn(name = "idinventario", referencedColumnName = "id")
+    private Inventario inventario;
+
+    @ManyToOne
+    @JoinColumn(name = "idtercero", referencedColumnName = "id")
+    private Tercero tercero;
+
+    public Long getId() {
+        return id;
+    }
+
+    public Alquiler(Long id, Date fechaPrestamo, int plazo, double precio, Inventario inventario, Tercero tercero) {
         this.id = id;
         this.fechaPrestamo = fechaPrestamo;
         this.plazo = plazo;
@@ -34,45 +46,23 @@ public class Alquiler {
         this.tercero = tercero;
     }
 
-    @ManyToOne 
-    @JoinColumn(name = "idinventario", referencedColumnName = "id")
-    private Inventario inventario;
-
-    @ManyToOne 
-    @JoinColumn(name = "idtercero", referencedColumnName = "id")
-    private Tercero tercero;
-   
-
-    
-
-    
-    public Long getId() {
-
-        return id;
-    }
-
     public void setId(Long id) {
-
         this.id = id;
     }
 
-    public Date getfechaPrestamo() {
-
+    public Date getFechaPrestamo() {
         return fechaPrestamo;
     }
 
-    public void setfechaPrestamo(Date fechaPrestamo) {
-
+    public void setFechaPrestamo(Date fechaPrestamo) {
         this.fechaPrestamo = fechaPrestamo;
     }
 
-    public Date getfechaDevolucion() {
-
+    public Date getFechaDevolucion() {
         return fechaDevolucion;
     }
 
-    public void setfechaDevolucion(Date fechaDevolucion) {
-
+    public void setFechaDevolucion(Date fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
 
@@ -84,14 +74,15 @@ public class Alquiler {
         this.plazo = plazo;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
+    
     public Inventario getInventario() {
         return inventario;
     }
@@ -100,5 +91,12 @@ public class Alquiler {
         this.inventario = inventario;
     }
 
+    public Tercero getTercero() {
+        return tercero;
+    }
+
+    public void setTercero(Tercero tercero) {
+        this.tercero = tercero;
+    }
 
 }

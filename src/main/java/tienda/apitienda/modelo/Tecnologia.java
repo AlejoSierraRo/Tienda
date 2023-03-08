@@ -1,4 +1,4 @@
-package tiendavideo.apitiendavideo.modelo;
+package tienda.apitienda.modelo;
 
 import javax.persistence.*;
 
@@ -36,5 +36,5 @@ public class Tecnologia {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    
 }

@@ -1,13 +1,13 @@
-package tiendavideo.apitiendavideo;
+package tienda.apitienda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApitiendavideoApplication {
+public class ApitiendaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ApitiendavideoApplication.class, args);
+		SpringApplication.run(ApitiendaApplication.class, args);
 	}
 
 }

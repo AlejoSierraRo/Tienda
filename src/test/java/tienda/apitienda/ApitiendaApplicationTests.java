@@ -1,10 +1,10 @@
-package tiendavideo.apitiendavideo;
+package tienda.apitienda;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApitiendavideoApplicationTests {
+class ApitiendaApplicationTests {
 
 	@Test
 	void contextLoads() {

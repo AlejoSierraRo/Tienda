@@ -1,10 +1,10 @@
-package tiendavideo.apitiendavideo.modelo;
+package tienda.apitienda.modelo;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "region")
 public class Region {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -61,5 +61,5 @@ public class Region {
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-
+    
 }

@@ -1,4 +1,4 @@
-package tiendavideo.apitiendavideo.modelo;
+package tienda.apitienda.modelo;
 
 import javax.persistence.*;
 
@@ -134,5 +134,5 @@ public class Tercero {
         }
         return false;
     }
-
+    
 }

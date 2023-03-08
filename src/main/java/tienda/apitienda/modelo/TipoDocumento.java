@@ -1,4 +1,4 @@
-package tiendavideo.apitiendavideo.modelo;
+package tienda.apitienda.modelo;
 
 import javax.persistence.*;
 
@@ -17,7 +17,6 @@ public class TipoDocumento {
     private String sigla;
 
     public TipoDocumento() {}
-    
 
     public TipoDocumento(long id, String tipo, String ingles, String sigla) {
         this.id = id;
@@ -56,6 +55,5 @@ public class TipoDocumento {
     public void setSigla(String sigla) {
         this.sigla = sigla;
     }
-
-
+    
 }
