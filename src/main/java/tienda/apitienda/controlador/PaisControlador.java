@@ -25,4 +25,15 @@ public class PaisControlador {
         return repositorio.findById(id).get();
     }
 
+    @RequestMapping(value = "/agregar", method = RequestMethod.POST)
+        public Pais crear(@RequestBody Pais pais){
+            return repositorio.save(pais);
+        
+    } 
+
+    @RequestMapping(value = "/modificar", method = RequestMethod.PUT)
+    public Pais actualizar(@RequestBody Pais pais) {
+        return repositorio.save(pais);
+    }
+
 }
